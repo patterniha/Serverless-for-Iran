@@ -20,4 +20,7 @@ for config in all_configs:
             json.dump(config_data, clean_file, indent=4)
 
 json.dump(all_j, open(output_path, "w"), indent=4)
+# Save combined no-comment subscription
+no_comment_output_path = os.path.join('Subscription', 'Serverless-for-Iran-no-comment.json')
+json.dump(all_j, open(no_comment_output_path, "w"), indent=4)
 print("done")

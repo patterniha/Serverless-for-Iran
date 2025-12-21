@@ -30,6 +30,10 @@ https://t.me/patterniha
 
 **آدرس کانفیگ‌های بدون کامنت (برای کلاینت‌هایی که با کامنت مشکل دارند مانند Streisand):**
 
+**Subscription (تمامی نسخه‌ها): https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran-no-comment.json**
+
+**لیست فایل‌ها به صورت تکی:**
+
 - [Serverless.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless.json)
 - [Serverless-dynx.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless-dynx.json)
 - [Serverless-shatel.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless-shatel.json)
