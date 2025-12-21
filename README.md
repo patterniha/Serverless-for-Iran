@@ -6,8 +6,6 @@ https://t.me/projectXhttp
 
 https://t.me/patterniha
 
-
-
 # نکات استفاده
 
 ۱. کانفیگ سرورلس برای اجرا نیاز به هسته Xray-core حداقل ورژن 25.12.8 دارد (حداقل v2rayNG v1.10.31)
@@ -24,15 +22,19 @@ https://t.me/patterniha
 
 ۷. در اندروید برای استفاده از dns ضد تحریم و دور زدن تحریمها باید Private DNS در تنظیمات اندروید و Use secure DNS در تنظیمات کروم خاموش باشد.
 
-
 ۸. در اپ v2rayNG بهتر است کانفیگها به صورت Subscription وارد شود تا در صورت آپدیت کانفیگها به صورت اتوماتیک برای شما هم اپدیت شود. موقع اضافه کردن: remarks را اسمی دلخواه قرار دهید؛ URL را آدرس Subscription قرار دهید؛ تیک automatic update را فعال کنید؛ و در آخر آپدیت را بزنید (همچنین برای آپدیت اتوماتیک باید آن را در تنظیمات برنامه نیز فعال کنید)
-
 
 **آدرس Subscription تمامی نسخه ها:**
 
-
 **https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran.json**
 
+**آدرس کانفیگ‌های بدون کامنت (برای کلاینت‌هایی که با کامنت مشکل دارند مانند Streisand):**
+
+- [Serverless.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless.json)
+- [Serverless-dynx.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless-dynx.json)
+- [Serverless-shatel.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless-shatel.json)
+- [Serverless-vanilla.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless-vanilla.json)
+- [Serverless-zeus.json](https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/no-comment/Serverless-zeus.json)
 
 # نسخه MitM + DomainFronting
 
