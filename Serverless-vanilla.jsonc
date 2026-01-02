@@ -6,7 +6,7 @@
   },
 
 
-  "remarks": "Serverless-vanilla-v40",
+  "remarks": "Serverless-vanilla-v41",
 
   "version": {
     "min": "25.12.8"
@@ -39,30 +39,30 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com"
+      "dns.alidns.com": ["223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1"]
     },
     "servers": [
       {
         "address": "fakedns",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "full:challenges.cloudflare.com", "geosite:category-porn", "geosite:telegram", "geosite:meta", "geosite:youtube", "geosite:twitter", "geosite:reddit", "geosite:twitch", "geosite:tiktok", "geosite:discord", "domain:workers.dev", "domain:pages.dev"]
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-porn", "geosite:telegram", "geosite:meta", "geosite:youtube", "geosite:twitter", "geosite:reddit", "geosite:twitch", "geosite:tiktok", "geosite:discord", "domain:workers.dev", "domain:pages.dev"]
       },
 	  {
         "tag": "anti-sanction-dns",
         "address": "tcp://dns.vanillapp.ir:853",
-        "expectedIPs": ["85.133.201.71"],
+        "expectedIPs": ["5.239.245.250", "78.158.166.180"],
         "timeoutMs": 5000,
         "finalQuery": false
       },
       {
         "tag": "no-filter-dns",
-        "address": "https://cloudflare-dns.com/dns-query",
+        "address": "h2c://dns.alidns.com/dns-query",
         "domains": ["geosite:category-porn", "geosite:telegram", "geosite:meta", "geosite:youtube", "geosite:twitter", "geosite:reddit", "geosite:twitch", "geosite:tiktok", "geosite:discord", "domain:workers.dev", "domain:pages.dev"],
         "timeoutMs": 10000,
         "finalQuery": true
       },
       {
         "address": "localhost",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "full:challenges.cloudflare.com"],
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir"],
         "finalQuery": true
       }
     ],
@@ -290,6 +290,28 @@
           }
         }
       }
+    },
+	{
+      "tag": "tls-repack-no-filter-dns",
+      "protocol": "direct",
+      "streamSettings": {
+		"security": "tls",
+		"tlsSettings": {
+          "serverName": "alidns.com",
+          "fingerprint": "chrome",
+		  "verifyPeerCertInNames": ["fromMitM"],
+          "alpn": ["fromMitM"]
+        },
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {
+            "tryDelayMs": 300,
+            "prioritizeIPv6": true,
+            "interleave": 2,
+            "maxConcurrentTry": 20
+          }
+        }
+      }
     }
   ],
 
@@ -314,7 +336,7 @@
 	  {"outboundTag": "udp-direct-out",
        "network": "udp", "inboundTag": ["anti-sanction-dns"]
       },
-      {"outboundTag": "full-fragment", // or "skip-fragment" or "tls-fragment"
+      {"outboundTag": "tls-repack-no-filter-dns",
        "inboundTag": ["no-filter-dns"]
       },
       {"outboundTag": "block-out",
@@ -327,7 +349,7 @@
        "network": "udp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir"], "ip": ["0.0.0.0/0", "::/0"]
       },
 	  {"outboundTag": "onlyv4-direct-out", // ensure route to anti-sanction-dns servers
-	   "ip": ["85.133.201.71"]
+	   "ip": ["5.239.245.250", "78.158.166.180"]
 	  },
       {"outboundTag": "tcp-direct-out",
        "network": "tcp", "ip": ["geoip:private", "geoip:ir"]

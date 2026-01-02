@@ -6,7 +6,7 @@
   },
 
 
-  "remarks": "Serverless-dynx-v40",
+  "remarks": "Serverless-dynx-v41",
 
   "version": {
     "min": "25.12.8"
@@ -39,12 +39,12 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com"
+      "dns.alidns.com": ["223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1"]
     },
     "servers": [
       {
         "address": "fakedns",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "full:challenges.cloudflare.com", "domain:dynx.pro", "geosite:category-porn", "geosite:telegram", "geosite:meta", "geosite:youtube", "geosite:twitter", "geosite:reddit", "geosite:twitch", "geosite:tiktok", "geosite:discord", "domain:workers.dev", "domain:pages.dev"]
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "domain:dynx.pro", "geosite:category-porn", "geosite:telegram", "geosite:meta", "geosite:youtube", "geosite:twitter", "geosite:reddit", "geosite:twitch", "geosite:tiktok", "geosite:discord", "domain:workers.dev", "domain:pages.dev"]
       },
 	  {
         "tag": "anti-sanction-dns",
@@ -55,14 +55,14 @@
       },
       {
         "tag": "no-filter-dns",
-        "address": "https://cloudflare-dns.com/dns-query",
+        "address": "h2c://dns.alidns.com/dns-query",
         "domains": ["geosite:category-porn", "geosite:telegram", "geosite:meta", "geosite:youtube", "geosite:twitter", "geosite:reddit", "geosite:twitch", "geosite:tiktok", "geosite:discord", "domain:workers.dev", "domain:pages.dev"],
         "timeoutMs": 10000,
         "finalQuery": true
       },
       {
         "address": "localhost",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "full:challenges.cloudflare.com", "domain:dynx.pro"],
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "domain:dynx.pro"],
         "finalQuery": true
       }
     ],
@@ -290,6 +290,28 @@
           }
         }
       }
+    },
+	{
+      "tag": "tls-repack-no-filter-dns",
+      "protocol": "direct",
+      "streamSettings": {
+		"security": "tls",
+		"tlsSettings": {
+          "serverName": "alidns.com",
+          "fingerprint": "chrome",
+		  "verifyPeerCertInNames": ["fromMitM"],
+          "alpn": ["fromMitM"]
+        },
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {
+            "tryDelayMs": 300,
+            "prioritizeIPv6": true,
+            "interleave": 2,
+            "maxConcurrentTry": 20
+          }
+        }
+      }
     }
   ],
 
@@ -314,7 +336,7 @@
 	  {"outboundTag": "udp-direct-out",
        "network": "udp", "inboundTag": ["anti-sanction-dns"]
       },
-      {"outboundTag": "full-fragment", // or "skip-fragment" or "tls-fragment"
+      {"outboundTag": "tls-repack-no-filter-dns",
        "inboundTag": ["no-filter-dns"]
       },
       {"outboundTag": "block-out",

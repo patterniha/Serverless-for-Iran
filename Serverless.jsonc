@@ -6,7 +6,7 @@
   },
 
 
-  "remarks": "Serverless-v40",
+  "remarks": "Serverless-v41",
 
   "version": {
     "min": "25.12.8"
@@ -39,22 +39,22 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com"
+      "dns.alidns.com": ["223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1"]
     },
     "servers": [
       {
         "address": "fakedns",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "full:challenges.cloudflare.com"]
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir"]
       },
       {
         "tag": "no-filter-dns",
-        "address": "https://cloudflare-dns.com/dns-query",
+        "address": "h2c://dns.alidns.com/dns-query",
         "timeoutMs": 10000,
         "finalQuery": true
       },
       {
         "address": "localhost",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "full:challenges.cloudflare.com"],
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir"],
         "finalQuery": true
       }
     ],
@@ -249,6 +249,28 @@
           {"type": "rand", "packet": "1230", "delay": "10", "applyTo": "ipv6"}, {"type": "rand", "packet": "1230", "delay": "10", "applyTo": "ipv6"}
         ]
       }
+    },
+	{
+      "tag": "tls-repack-no-filter-dns",
+      "protocol": "direct",
+      "streamSettings": {
+		"security": "tls",
+		"tlsSettings": {
+          "serverName": "alidns.com",
+          "fingerprint": "chrome",
+		  "verifyPeerCertInNames": ["fromMitM"],
+          "alpn": ["fromMitM"]
+        },
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {
+            "tryDelayMs": 300,
+            "prioritizeIPv6": true,
+            "interleave": 2,
+            "maxConcurrentTry": 20
+          }
+        }
+      }
     }
   ],
 
@@ -267,7 +289,7 @@
       {"outboundTag": "dns-out",
        "inboundTag": ["mixed-in"], "port": 53
       },
-      {"outboundTag": "full-fragment", // or "skip-fragment" or "tls-fragment"
+      {"outboundTag": "tls-repack-no-filter-dns",
        "inboundTag": ["no-filter-dns"]
       },
       {"outboundTag": "block-out",
