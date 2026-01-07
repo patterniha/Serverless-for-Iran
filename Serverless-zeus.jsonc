@@ -6,7 +6,7 @@
   },
 
 
-  "remarks": "Serverless-zeus-v41",
+  "remarks": "Serverless-zeus-v42",
 
   "version": {
     "min": "25.12.8"
@@ -39,7 +39,10 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com"
+      "cloudflare-dns.com": "challenges.cloudflare.com",
+	  "domain:ytimg.com": "www.google.com",
+	  "domain:ggpht.com": "www.google.com",
+	  "domain:youtube.com": "www.google.com"
     },
     "servers": [
       {
