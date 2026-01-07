@@ -6,7 +6,7 @@
   },
 
 
-  "remarks": "Serverless-dynx-v42",
+  "remarks": "Serverless-dynx-v41",
 
   "version": {
     "min": "25.12.8"
@@ -39,10 +39,7 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com",
-	  "domain:ytimg.com": "www.google.com",
-	  "domain:ggpht.com": "www.google.com",
-	  "domain:youtube.com": "www.google.com"
+      "cloudflare-dns.com": "challenges.cloudflare.com"
     },
     "servers": [
       {
