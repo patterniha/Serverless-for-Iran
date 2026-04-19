@@ -31,15 +31,40 @@ https://t.me/patterniha
 ۹. در اپ v2rayNG بهتر است کانفیگها به صورت Subscription وارد شود تا در صورت آپدیت کانفیگها به صورت اتوماتیک برای شما هم اپدیت شود. موقع اضافه کردن: remarks را اسمی دلخواه قرار دهید؛ URL را آدرس Subscription قرار دهید؛ تیک automatic update را فعال کنید؛ و در آخر آپدیت را بزنید (همچنین برای آپدیت اتوماتیک باید آن را در تنظیمات برنامه نیز فعال کنید)
 
 
-**آدرس Subscription تمامی نسخه ها:**
-
+**آدرس Subscription نسخه پیشنهادی (curated):**
 
 **https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran.json**
 
+**آدرس Subscription نسخه کامل تست (full matrix):**
 
-# نسخه MitM + DomainFronting
+**https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran-full.json**
 
-بزودی...
+# انتخاب پروفایل
+
+برای هر خانواده (`Serverless` / `Serverless-dynx` / `Serverless-shatel` / ...) ابتدا این ترتیب را تست کنید:
+
+1. `natA-tlshello-small-tcp443-cf`
+2. `natA-tlshello-small-udp-light-cf`
+3. `natB-stream-small-tcp443-cf`
+4. `mobile-soft-tcp443-cf`
+5. `legacy-v41-udp-light-cf`
+
+در اسم پروفایل:
+
+- `tcp443` یعنی ترافیک UDP/443 (QUIC) بلاک می‌شود تا اپ‌ها سریع‌تر به TCP/TLS برگردند.
+- `udp-light` یعنی UDP فعال می‌ماند اما noise بسیار سبک‌تر از حالت قدیمی است.
+- `udp-heavy` حالت سنگین قبلی است و فقط برای تست/حالت آزمایشی پیشنهاد می‌شود.
+- `cf` / `google` / `quad9` یعنی DNS no-filter روی DoH همان سرویس تنظیم شده است.
+
+# نکته امنیتی
+
+این کانفیگ‌ها direct/serverless هستند و ابزار ناشناس‌سازی نیستند. الگوی زمانی، DNS، مقصد IP و رفتار اپلیکیشن شما ممکن است برای اپراتور شبکه قابل مشاهده باشد.
+
+در گزارش‌ها IP کامل، شماره موبایل، یوزرنیم، اسکرین‌شات دارای اطلاعات شخصی، یا هر شناسه قابل ردیابی ارسال نکنید.
+
+# MitM + DomainFronting
+
+این مسیر در حالت پیش‌فرض ارائه نمی‌شود و فقط باید به‌عنوان حالت آزمایشی/لابراتواری استفاده شود.
 
 # حمایت
 
