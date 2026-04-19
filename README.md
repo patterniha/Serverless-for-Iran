@@ -31,15 +31,20 @@ https://t.me/patterniha
 ۹. در اپ v2rayNG بهتر است کانفیگها به صورت Subscription وارد شود تا در صورت آپدیت کانفیگها به صورت اتوماتیک برای شما هم اپدیت شود. موقع اضافه کردن: remarks را اسمی دلخواه قرار دهید؛ URL را آدرس Subscription قرار دهید؛ تیک automatic update را فعال کنید؛ و در آخر آپدیت را بزنید (همچنین برای آپدیت اتوماتیک باید آن را در تنظیمات برنامه نیز فعال کنید)
 
 
-**آدرس Subscription نسخه پیشنهادی (curated):**
+**آدرس Subscription تمامی نسخه ها:**
+
 
 **https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran.json**
 
-**آدرس Subscription نسخه کامل تست (full matrix):**
+**آدرس نسخه کامل تست (full matrix):**
 
 **https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran-full.json**
 
-# انتخاب پروفایل
+# نسخه MitM + DomainFronting
+
+بزودی...
+
+# انتخاب پروفایل (نسخه‌های جدید)
 
 برای هر خانواده (`Serverless` / `Serverless-dynx` / `Serverless-shatel` / ...) ابتدا این ترتیب را تست کنید:
 
@@ -61,10 +66,6 @@ https://t.me/patterniha
 این کانفیگ‌ها direct/serverless هستند و ابزار ناشناس‌سازی نیستند. الگوی زمانی، DNS، مقصد IP و رفتار اپلیکیشن شما ممکن است برای اپراتور شبکه قابل مشاهده باشد.
 
 در گزارش‌ها IP کامل، شماره موبایل، یوزرنیم، اسکرین‌شات دارای اطلاعات شخصی، یا هر شناسه قابل ردیابی ارسال نکنید.
-
-# MitM + DomainFronting
-
-این مسیر در حالت پیش‌فرض ارائه نمی‌شود و فقط باید به‌عنوان حالت آزمایشی/لابراتواری استفاده شود.
 
 # حمایت
 
