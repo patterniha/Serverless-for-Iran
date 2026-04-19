@@ -40,30 +40,75 @@ https://t.me/patterniha
 
 **https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/Serverless-for-Iran-full.json**
 
+**manifest پروفایل‌ها:**
+
+**https://raw.githubusercontent.com/patterniha/Serverless-for-Iran/refs/heads/main/Subscription/profiles-manifest.json**
+
 # نسخه MitM + DomainFronting
 
 بزودی...
 
 # انتخاب پروفایل (نسخه‌های جدید)
 
-برای هر خانواده (`Serverless` / `Serverless-dynx` / `Serverless-shatel` / ...) ابتدا این ترتیب را تست کنید:
+ابتدا Subscription پیش‌فرض (curated) را استفاده کنید، نه full matrix.
 
-1. `natA-tlshello-small-tcp443-cf`
-2. `natA-tlshello-small-udp-light-cf`
-3. `natB-stream-small-tcp443-cf`
-4. `mobile-soft-tcp443-cf`
-5. `legacy-v41-udp-light-cf`
+Start here:
+
+1. `mobile-soft-quic-block-cf`
+2. `natA-tlshello-small-quic-block-cf`
+3. `natB-stream-small-udp-light-google`
+4. `mobile-soft-udp-light-quad9`
+5. `legacy-v41-quic-block-cf`
 
 در اسم پروفایل:
 
-- `tcp443` یعنی ترافیک UDP/443 (QUIC) بلاک می‌شود تا اپ‌ها سریع‌تر به TCP/TLS برگردند.
+- `quic-block` یعنی QUIC/UDP443 بلاک می‌شود تا اپ‌ها سریع‌تر به TCP/TLS برگردند.
 - `udp-light` یعنی UDP فعال می‌ماند اما noise بسیار سبک‌تر از حالت قدیمی است.
 - `udp-heavy` حالت سنگین قبلی است و فقط برای تست/حالت آزمایشی پیشنهاد می‌شود.
 - `cf` / `google` / `quad9` یعنی DNS no-filter روی DoH همان سرویس تنظیم شده است.
 
+# Troubleshooting
+
+## Browser does not open blocked sites
+
+1. `natA-tlshello-small-quic-block-cf`
+2. `natB-stream-small-quic-block-google`
+3. `mobile-soft-quic-block-quad9`
+
+## Browser works but Android apps fail
+
+1. اول یک `quic-block` تست کنید.
+2. بعضی اپ‌ها روی UDP/443 می‌مانند و تا QUIC بلاک نشود به TCP fragmentation سوئیچ نمی‌کنند.
+
+## DNS errors / NXDOMAIN / only some domains fail
+
+1. DNS family را عوض کنید: `cf` یا `google` یا `quad9`
+2. Android Private DNS را خاموش کنید.
+3. Chrome Secure DNS را خاموش کنید.
+
+## High latency / battery drain / hot phone
+
+1. full/lab را استفاده نکنید.
+2. `udp-heavy` را استفاده نکنید.
+3. از `mobile-soft-quic-block` یا `mobile-soft-udp-light` استفاده کنید.
+
+## Nothing works on one operator
+
+1. یک Testing Report باز کنید.
+2. فقط operator, client, profile, failure type را بفرستید.
+3. IP کامل، شماره، هندل، یا اسکرین‌شات شخصی نفرستید.
+
+## Path diagnostics
+
+برای گزارش مسیر/دی‌ان‌اس/گواهی TLS از اسکریپت زیر استفاده کنید:
+
+`scripts/diagnose_path.sh github.com`
+
+این اسکریپت خروجی privacy-safe آماده کپی برای issue می‌دهد.
+
 # نکته امنیتی
 
-این کانفیگ‌ها direct/serverless هستند و ابزار ناشناس‌سازی نیستند. الگوی زمانی، DNS، مقصد IP و رفتار اپلیکیشن شما ممکن است برای اپراتور شبکه قابل مشاهده باشد.
+این کانفیگ‌ها direct/serverless هستند و ابزار ناشناس‌سازی نیستند. ISP می‌تواند مقصد IP، timing، حجم ترافیک، و الگوهای غیرعادی اتصال را مشاهده کند.
 
 در گزارش‌ها IP کامل، شماره موبایل، یوزرنیم، اسکرین‌شات دارای اطلاعات شخصی، یا هر شناسه قابل ردیابی ارسال نکنید.
 

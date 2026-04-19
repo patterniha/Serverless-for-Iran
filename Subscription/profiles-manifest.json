@@ -1,0 +1,3877 @@
+[
+  {
+    "remarks": "Serverless-v41-legacy-v41-quic-block-cf",
+    "tier": "default",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-quic-block-cf",
+    "tier": "default",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-udp-light-google",
+    "tier": "default",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-quic-block-cf",
+    "tier": "default",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-udp-light-cf",
+    "tier": "default",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-quic-block-google",
+    "tier": "default",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-udp-light-quad9",
+    "tier": "default",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-quic-block-quad9",
+    "tier": "default",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41",
+    "tier": "compatibility",
+    "fragment": "legacy-base",
+    "udp": "as-is",
+    "dns": "as-is",
+    "good_for": [
+      "backward-compatibility"
+    ],
+    "avoid_if": [
+      "first-choice"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41",
+    "tier": "compatibility",
+    "fragment": "legacy-base",
+    "udp": "as-is",
+    "dns": "as-is",
+    "good_for": [
+      "backward-compatibility"
+    ],
+    "avoid_if": [
+      "first-choice"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41",
+    "tier": "compatibility",
+    "fragment": "legacy-base",
+    "udp": "as-is",
+    "dns": "as-is",
+    "good_for": [
+      "backward-compatibility"
+    ],
+    "avoid_if": [
+      "first-choice"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41",
+    "tier": "compatibility",
+    "fragment": "legacy-base",
+    "udp": "as-is",
+    "dns": "as-is",
+    "good_for": [
+      "backward-compatibility"
+    ],
+    "avoid_if": [
+      "first-choice"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41",
+    "tier": "compatibility",
+    "fragment": "legacy-base",
+    "udp": "as-is",
+    "dns": "as-is",
+    "good_for": [
+      "backward-compatibility"
+    ],
+    "avoid_if": [
+      "first-choice"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-quic-block-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-quic-block-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-udp-light-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-udp-light-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-legacy-v41-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-mobile-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natA-tlshello-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-natB-stream-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-dynx-v41-skip-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-quic-block-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-quic-block-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-udp-light-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-udp-light-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-legacy-v41-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-mobile-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natA-tlshello-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-natB-stream-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-shatel-v41-skip-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-quic-block-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-udp-light-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-udp-light-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-legacy-v41-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-mobile-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natA-tlshello-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-natB-stream-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-v41-skip-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-quic-block-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-quic-block-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-udp-light-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-udp-light-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-legacy-v41-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-mobile-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natA-tlshello-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-natB-stream-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-vanilla-v41-skip-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-quic-block-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-quic-block-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "first-choice",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "first-choice",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-udp-light-cf",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-udp-light-google",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-legacy-v41-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "legacy-v41",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "first-choice",
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lab-testing",
+      "lossy-mobile-networks"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-mobile-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "mobile-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "battery-sensitive",
+      "browser",
+      "doh-diversity",
+      "lossy-mobile-networks",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natA-tlshello-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natA-tlshello-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-quic-block-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-quic-block-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-udp-light-cf",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-udp-light-google",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-natB-stream-small-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "natB-stream-small",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-quic-block-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "cf",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-quic-block-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "google",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-quic-block-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "quic-block",
+    "dns": "quad9",
+    "good_for": [
+      "android-apps-that-fallback-to-tcp",
+      "browser",
+      "doh-diversity",
+      "restricted-quic-paths"
+    ],
+    "avoid_if": [
+      "app-requires-quic",
+      "gaming",
+      "voip"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-udp-heavy-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-udp-heavy-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-udp-heavy-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-heavy",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "lab-testing"
+    ],
+    "avoid_if": [
+      "battery-sensitive",
+      "normal-daily-use"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-udp-light-cf",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "cf",
+    "good_for": [
+      "browser",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-udp-light-google",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "google",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  },
+  {
+    "remarks": "Serverless-zeus-v41-skip-soft-udp-light-quad9",
+    "tier": "lab",
+    "fragment": "skip-soft",
+    "udp": "udp-light",
+    "dns": "quad9",
+    "good_for": [
+      "browser",
+      "doh-diversity",
+      "mixed-app-traffic",
+      "mobile-data"
+    ],
+    "avoid_if": [
+      "udp-sensitive-apps"
+    ]
+  }
+]
