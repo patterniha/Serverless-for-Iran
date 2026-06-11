@@ -1,0 +1,235 @@
+{
+  "__Credits__": {
+    "creator": "@patterniha",
+    "donate1": "USDT (BEP20): 0x76a768B53Ca77B43086946315f0BDF21156bF424",
+    "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
+    "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
+  },
+
+
+  "remarks": "Serverless-v43-low_delay",
+
+  "version": {
+    "min": "26.6.1"
+  },
+
+  "log": {
+    "loglevel": "warning", "dnsLog": false, "access": "none"
+  },
+
+  "policy": {
+    "levels": {
+      "0": {
+        "uplinkOnly": 0,
+        "downlinkOnly": 0
+      },
+      "1": {
+        "uplinkOnly": 0,
+        "downlinkOnly": 0,
+        "connIdle": 12
+      }
+    }
+  },
+
+  "dns":{
+    "hosts": {
+      "cloudflare-dns.com": "challenges.cloudflare.com"
+    },
+    "servers": [
+      {
+        "address": "fakedns",
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:xai", "geosite:openai", "geosite:google-deepmind", "geosite:anthropic", "geosite:github", "geosite:microsoft", "geosite:golang", "geosite:python", "geosite:rust", "full:challenges.cloudflare.com"]
+      },
+      {
+        "tag": "no-filter-dns",
+        "address": "https://cloudflare-dns.com/dns-query",
+        "timeoutMs": 12000,
+        "finalQuery": true
+      },
+      {
+        "address": "localhost",
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:xai", "geosite:openai", "geosite:google-deepmind", "geosite:anthropic", "geosite:github", "geosite:microsoft", "geosite:golang", "geosite:python", "geosite:rust", "full:challenges.cloudflare.com"],
+        "finalQuery": true
+      }
+    ],
+    "queryStrategy": "UseSystem",
+    "useSystemHosts": true,
+	"serveStale": true
+  },
+
+  "inbounds": [
+    {
+      "tag": "mixed-in",
+      "port": 10808,
+      "protocol": "mixed",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["fakedns", "tls", "http", "quic"],
+        "routeOnly": false
+      },
+      "settings": {
+        "udp": true,
+        "ip": "127.0.0.1"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveInterval": 1,
+          "tcpKeepAliveIdle": 11
+        }
+      }
+    }
+  ],
+
+  "outbounds": [
+    {
+      "tag": "block",
+      "protocol": "block"
+    },
+    {
+      "tag": "tcp-direct",
+      "protocol": "direct",
+      "streamSettings": {
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 2, "maxConcurrentTry": 20}
+        }
+      }
+    },
+	{
+      "tag": "udp-direct",
+      "protocol": "direct",
+      "settings": {
+        "targetStrategy": "ForceIPv6v4"
+	  }
+	},
+    {
+      "tag": "dns-out",
+      "protocol": "dns",
+      "settings": {
+        "userLevel": 1
+      }
+    },
+    {
+      "tag": "tcp-fragment",
+      "protocol": "direct",
+      "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {"type": "fragment", "settings": {"packets": "1-1", "length": "1", "delay": "1", "maxSplit": "163"}}
+          ]
+        },
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 2, "maxConcurrentTry": 20}
+        }
+      }
+    },
+    {
+      "tag": "tcp-fragment-tls",
+      "protocol": "direct",
+      "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {"type": "fragment", "settings": {"packets": "1-1", "length": "1", "delay": "1", "maxSplit": "163"}},
+			{"type": "fragment", "settings": {"packets": "tlshello", "length": "124", "delay": "0", "maxSplit": "0"}}
+          ]
+        },
+        "sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 2, "maxConcurrentTry": 20}
+        }
+      }
+    },
+    {
+      "tag": "udp-noises",
+      "protocol": "direct",
+      "settings": {
+        "targetStrategy": "ForceIPv6v4"
+      },
+      "streamSettings": {
+        "finalmask": {
+          "udp": [
+            {
+              "type": "noise",
+              "settings": {
+                "reset": "28",
+                "noise": [
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"},
+                  {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}, {"rand": "1200-1230", "delay": "10"}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "outboundTag": "tcp-fragment",
+        "inboundTag": ["no-filter-dns"]
+      },
+      {
+        "outboundTag": "dns-out",
+        "port": 53
+      },
+      {
+        "outboundTag": "tcp-direct",
+        "network": "tcp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:xai", "geosite:openai", "geosite:google-deepmind", "geosite:anthropic", "geosite:github", "geosite:microsoft", "geosite:golang", "geosite:python", "geosite:rust"]
+      },
+	  {
+        "outboundTag": "udp-direct",
+        "network": "udp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:xai", "geosite:openai", "geosite:google-deepmind", "geosite:anthropic", "geosite:github", "geosite:microsoft", "geosite:golang", "geosite:python", "geosite:rust"]
+      },
+      {
+        "outboundTag": "block",
+        "ip": ["10.10.34.0/24", "2001:4188:2:600::/64"]
+      },
+      {
+        "outboundTag": "tcp-direct",
+        "network": "tcp", "ip": ["geoip:private", "geoip:ir"]
+      },
+	  {
+        "outboundTag": "udp-direct",
+        "network": "udp", "ip": ["geoip:private", "geoip:ir"]
+      },
+      {
+        "outboundTag": "udp-noises",
+        "network": "udp", "protocol": ["quic"], "ip": ["0.0.0.0/0", "::/0"]
+      },
+      {
+        "outboundTag": "udp-noises",
+        "network": "udp", "port": "443", "ip": ["0.0.0.0/0", "::/0"]
+      },
+      {
+        "outboundTag": "udp-direct",
+        "network": "udp", "ip": ["0.0.0.0/0", "::/0"]
+      },
+      {
+        "outboundTag": "tcp-fragment",
+        "network": "tcp", "protocol": ["tls"], "ip": ["0.0.0.0/0", "::/0"]
+      },
+      {
+        "outboundTag": "tcp-fragment",
+        "network": "tcp", "port": "443", "ip": ["0.0.0.0/0", "::/0"]
+      },
+      {
+        "outboundTag": "tcp-fragment",
+        "network": "tcp", "ip": ["0.0.0.0/0", "::/0"]
+      },
+      {
+        "outboundTag": "block",
+        "port": "0-65535"
+      }
+    ]
+  }
+}

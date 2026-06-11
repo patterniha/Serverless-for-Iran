@@ -2,7 +2,7 @@ import json
 import os
 import json5
 
-all_configs = ["Serverless.jsonc"]
+all_configs = ["Serverless-low_delay.jsonc", "Serverless-high_delay.jsonc"]
 output_path = os.path.join('Subscription', 'Serverless-for-Iran.json')
 
 all_j = []
