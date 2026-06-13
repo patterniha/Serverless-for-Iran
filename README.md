@@ -24,6 +24,8 @@
 
 ۶. در اندروید برای عدم تداخل با (dns و sniffing) کانفیگ بهتر است Private DNS در تنظیمات اندروید و Use secure DNS در تنظیمات کروم خاموش باشد.
 
+۷. از کانفیگها تست نگیرید، نتیجه‌ی تست ارتباطی با کار کردن یا کار نکردن این نوع کانفیگها ندارد.
+
 # نسخه MitM + DomainFronting
 
 https://github.com/patterniha/MITM-DomainFronting
