@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v44-high_delay",
+  "remarks": "Serverless-v45-high_delay",
 
   "version": {
     "min": "26.6.1"
@@ -91,7 +91,7 @@
       "streamSettings": {
         "sockopt": {
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 2, "maxConcurrentTry": 20}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": false, "interleave": 2, "maxConcurrentTry": 20}
         }
       }
     },
@@ -99,7 +99,7 @@
       "tag": "udp-direct",
       "protocol": "direct",
       "settings": {
-        "targetStrategy": "ForceIPv6v4"
+        "targetStrategy": "ForceIPv4"
 	  }
 	},
     {
@@ -115,12 +115,12 @@
       "streamSettings": {
         "finalmask": {
           "tcp": [
-            {"type": "fragment", "settings": {"packets": "1-1", "length": "1", "delay": "11", "maxSplit": "163"}}
+            {"type": "fragment", "settings": {"packets": "1-1", "length": "5", "delay": "9", "maxSplit": "140"}}
           ]
         },
         "sockopt": {
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 2, "maxConcurrentTry": 20}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": false, "interleave": 2, "maxConcurrentTry": 20}
         }
       }
     },
@@ -130,13 +130,13 @@
       "streamSettings": {
         "finalmask": {
           "tcp": [
-            {"type": "fragment", "settings": {"packets": "1-1", "length": "1", "delay": "11", "maxSplit": "163"}},
+            {"type": "fragment", "settings": {"packets": "1-1", "length": "1", "delay": "10", "maxSplit": "163"}},
 			{"type": "fragment", "settings": {"packets": "tlshello", "length": "124", "delay": "0", "maxSplit": "0"}}
           ]
         },
         "sockopt": {
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 2, "maxConcurrentTry": 20}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": false, "interleave": 2, "maxConcurrentTry": 20}
         }
       }
     },
@@ -144,7 +144,7 @@
       "tag": "udp-noises",
       "protocol": "direct",
       "settings": {
-        "targetStrategy": "ForceIPv6v4"
+        "targetStrategy": "ForceIPv4"
       },
       "streamSettings": {
         "finalmask": {
