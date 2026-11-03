@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v56-oob",
+  "remarks": "Serverless-v57-oob",
 
   "version": {
     "min": "26.11.1"
@@ -152,7 +152,7 @@
         "finalmask": {
           "tcp": [
             {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}},
-            {"type": "fragment","settings": {"packets": "1-1","lengths": ["76"],"delays": ["30"],"maxSplit": "2"}}
+            {"type": "fragment","settings": {"packets": "1-1","lengths": ["75"],"delays": ["30"],"maxSplit": "2"}}
           ]
         },
         "sockopt": {

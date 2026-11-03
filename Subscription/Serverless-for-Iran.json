@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v56-fragA",
+        "remarks": "Serverless-v57-fragA",
         "version": {
             "min": "26.11.1"
         },
@@ -515,7 +515,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v56-fragB",
+        "remarks": "Serverless-v57-fragB",
         "version": {
             "min": "26.11.1"
         },
@@ -1024,7 +1024,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v56-oob",
+        "remarks": "Serverless-v57-oob",
         "version": {
             "min": "26.11.1"
         },
@@ -1264,7 +1264,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "76"
+                                        "75"
                                     ],
                                     "delays": [
                                         "30"
