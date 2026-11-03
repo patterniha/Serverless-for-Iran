@@ -7,10 +7,10 @@
   },
 
 
-  "remarks": "Serverless-v52-fragA",
+  "remarks": "Serverless-v53-fragA",
 
   "version": {
-    "min": "26.6.27"
+    "min": "26.11.1"
   },
 
   "log": {
