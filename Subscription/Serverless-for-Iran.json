@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v53-fragA",
+        "remarks": "Serverless-v54-fragA",
         "version": {
             "min": "26.11.1"
         },
@@ -507,7 +507,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v53-fragB",
+        "remarks": "Serverless-v54-fragB",
         "version": {
             "min": "26.11.1"
         },
@@ -1008,7 +1008,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v53-oob",
+        "remarks": "Serverless-v54-oob",
         "version": {
             "min": "26.11.1"
         },
@@ -1242,11 +1242,24 @@
                                     "delayMs": 30,
                                     "maxBytes": 16384
                                 }
+                            },
+                            {
+                                "type": "fragment",
+                                "settings": {
+                                    "packets": "1-1",
+                                    "lengths": [
+                                        "76"
+                                    ],
+                                    "delays": [
+                                        "30"
+                                    ],
+                                    "maxSplit": "2"
+                                }
                             }
                         ]
                     },
                     "sockopt": {
-                        "dialMode": "oob.0",
+                        "dialMode": "oob.0,0",
                         "domainStrategy": "ForceIP",
                         "happyEyeballs": {
                             "tryDelayMs": 300,

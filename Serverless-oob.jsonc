@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v53-oob",
+  "remarks": "Serverless-v54-oob",
 
   "version": {
     "min": "26.11.1"
@@ -151,11 +151,12 @@
       "streamSettings": {
         "finalmask": {
           "tcp": [
-            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}}
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}},
+            {"type": "fragment","settings": {"packets": "1-1","lengths": ["76"],"delays": ["30"],"maxSplit": "2"}}
           ]
         },
         "sockopt": {
-          "dialMode": "oob.0",
+          "dialMode": "oob.0,0",
           "domainStrategy": "ForceIP",
           "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
         }
