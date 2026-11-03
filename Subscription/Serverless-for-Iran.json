@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v54-fragA",
+        "remarks": "Serverless-v55-fragA",
         "version": {
             "min": "26.11.1"
         },
@@ -54,7 +54,7 @@
                 },
                 {
                     "tag": "no-filter-dns",
-                    "address": "https://cloudflare-dns.com/dns-query",
+                    "address": "https+one://cloudflare-dns.com/dns-query",
                     "timeoutMs": 12000,
                     "finalQuery": true
                 },
@@ -507,7 +507,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v54-fragB",
+        "remarks": "Serverless-v55-fragB",
         "version": {
             "min": "26.11.1"
         },
@@ -555,7 +555,7 @@
                 },
                 {
                     "tag": "no-filter-dns",
-                    "address": "https://cloudflare-dns.com/dns-query",
+                    "address": "https+one://cloudflare-dns.com/dns-query",
                     "timeoutMs": 12000,
                     "finalQuery": true
                 },
@@ -1008,7 +1008,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v54-oob",
+        "remarks": "Serverless-v55-oob",
         "version": {
             "min": "26.11.1"
         },
