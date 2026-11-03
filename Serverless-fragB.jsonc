@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v55-fragB",
+  "remarks": "Serverless-v56-fragB",
 
   "version": {
     "min": "26.11.1"
@@ -135,8 +135,9 @@
       "streamSettings": {
         "finalmask": {
           "tcp": [
-			{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["0", "104", "1"], "delays": ["0"], "maxSplit": "0"}},
-            {"type": "fragment", "settings": {"packets": "1-1", "lengths": ["114", "1"], "delays": ["1"], "maxSplit": "11"}}
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}},
+			{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["0", "105", "1"], "delays": ["0"], "maxSplit": "0"}},
+            {"type": "fragment", "settings": {"packets": "1-1", "lengths": ["115", "1"], "delays": ["1"], "maxSplit": "11"}}
           ]
         },
         "sockopt": {
