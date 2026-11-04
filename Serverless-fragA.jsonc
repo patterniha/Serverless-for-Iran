@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v57-fragA",
+  "remarks": "Serverless-v58-fragA",
 
   "version": {
     "min": "26.11.1"
@@ -34,7 +34,7 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com"
+      "dns.redirect": "challenges.cloudflare.com"
     },
     "servers": [
       {
@@ -43,7 +43,7 @@
       },
       {
         "tag": "no-filter-dns",
-        "address": "https+one://cloudflare-dns.com/dns-query",
+        "address": "h2c+one://cloudflare-dns.com/dns-query",
         "timeoutMs": 12000,
         "finalQuery": true
       },
@@ -147,6 +147,34 @@
       }
     },
     {
+      "tag": "tls-repack-dns",
+      "protocol": "direct",
+      "settings": {
+        "redirect": "dns.redirect:0"
+      },
+      "streamSettings": {
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "fromMitM",
+          "verifyPeerCertByName": "fromMitM",
+          "alpn": ["fromMitM"],
+          "fingerprint": "unsafe",
+          "cipherSuites": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        },
+        "finalmask": {
+          "tcp": [
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}},
+			{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["6", "99", "1"], "delays": ["0"], "maxSplit": "0"}},
+            {"type": "fragment", "settings": {"packets": "1-1", "lengths": ["115", "1"], "delays": ["1"], "maxSplit": "11"}}
+          ]
+        },
+		"sockopt": {
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
+        }
+      }
+    },
+    {
       "tag": "udp-noises",
       "protocol": "direct",
       "streamSettings": {
@@ -195,7 +223,7 @@
         "network": "udp"
       },
       {
-        "outboundTag": "tcp-fragment-tls",
+        "outboundTag": "tls-repack-dns",
         "inboundTag": ["no-filter-dns"]
       },
       {

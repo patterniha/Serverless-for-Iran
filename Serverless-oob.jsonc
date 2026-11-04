@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v57-oob",
+  "remarks": "Serverless-v58-oob",
 
   "version": {
     "min": "26.11.1"
@@ -34,7 +34,7 @@
   "dns":{
     "hosts": {
       "geosite:category-ads-all": "#3",
-      "cloudflare-dns.com": "challenges.cloudflare.com"
+      "dns.redirect": "challenges.cloudflare.com"
     },
     "servers": [
       {
@@ -43,7 +43,7 @@
       },
       {
         "tag": "no-filter-dns",
-        "address": "https+one://cloudflare-dns.com/dns-query",
+        "address": "h2c+one://cloudflare-dns.com/dns-query",
         "timeoutMs": 12000,
         "finalQuery": true
       },
@@ -163,6 +163,33 @@
       }
     },
     {
+      "tag": "tls-repack-dns",
+      "protocol": "direct",
+      "settings": {
+        "redirect": "dns.redirect:0"
+      },
+      "streamSettings": {
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "fromMitM",
+          "verifyPeerCertByName": "fromMitM",
+          "alpn": ["fromMitM"],
+          "fingerprint": "hellochrome_120"
+        },
+        "finalmask": {
+          "tcp": [
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}},
+            {"type": "fragment","settings": {"packets": "1-1","lengths": ["75"],"delays": ["30"],"maxSplit": "2"}}
+          ]
+        },
+		"sockopt": {
+          "dialMode": "oob.0,0",
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
+        }
+      }
+    },
+    {
       "tag": "udp-noises",
       "protocol": "direct",
       "streamSettings": {
@@ -211,7 +238,7 @@
         "network": "udp"
       },
       {
-        "outboundTag": "tcp-oob",
+        "outboundTag": "tls-repack-dns",
         "inboundTag": ["no-filter-dns"]
       },
       {
