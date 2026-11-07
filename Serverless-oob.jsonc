@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v58-oob",
+  "remarks": "Serverless-v59-oob",
 
   "version": {
     "min": "26.11.1"
@@ -92,6 +92,11 @@
       "tag": "tcp-direct",
       "protocol": "direct",
       "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}}
+          ]
+        },
         "sockopt": {
           "domainStrategy": "ForceIP",
           "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
@@ -112,37 +117,6 @@
       "protocol": "dns",
       "settings": {
         "userLevel": 12
-      }
-    },
-    {
-      "tag": "tcp-fragment",
-      "protocol": "direct",
-      "streamSettings": {
-        "finalmask": {
-          "tcp": [
-            {"type": "fragment", "settings": {"packets": "1-1", "lengths": ["1"], "delays": ["1"], "maxSplit": "201"}}
-          ]
-        },
-        "sockopt": {
-          "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
-        }
-      }
-    },
-    {
-      "tag": "tcp-fragment-tls",
-      "protocol": "direct",
-      "streamSettings": {
-        "finalmask": {
-          "tcp": [
-			{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["6", "98", "1"], "delays": ["0"], "maxSplit": "0"}},
-            {"type": "fragment", "settings": {"packets": "1-1", "lengths": ["114", "1"], "delays": ["1"], "maxSplit": "11"}}
-          ]
-        },
-        "sockopt": {
-          "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
-        }
       }
     },
     {

@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v58-fragA",
+        "remarks": "Serverless-v59-fragA",
         "version": {
             "min": "26.11.1"
         },
@@ -120,6 +120,18 @@
                 "tag": "tcp-direct",
                 "protocol": "direct",
                 "streamSettings": {
+                    "finalmask": {
+                        "tcp": [
+                            {
+                                "type": "merge",
+                                "settings": {
+                                    "times": 100,
+                                    "delayMs": 30,
+                                    "maxBytes": 16384
+                                }
+                            }
+                        ]
+                    },
                     "sockopt": {
                         "domainStrategy": "ForceIP",
                         "happyEyeballs": {
@@ -145,38 +157,6 @@
                 "protocol": "dns",
                 "settings": {
                     "userLevel": 12
-                }
-            },
-            {
-                "tag": "tcp-fragment",
-                "protocol": "direct",
-                "streamSettings": {
-                    "finalmask": {
-                        "tcp": [
-                            {
-                                "type": "fragment",
-                                "settings": {
-                                    "packets": "1-1",
-                                    "lengths": [
-                                        "1"
-                                    ],
-                                    "delays": [
-                                        "1"
-                                    ],
-                                    "maxSplit": "201"
-                                }
-                            }
-                        ]
-                    },
-                    "sockopt": {
-                        "domainStrategy": "ForceIP",
-                        "happyEyeballs": {
-                            "tryDelayMs": 300,
-                            "prioritizeIPv6": true,
-                            "interleave": 4,
-                            "maxConcurrentTry": 20
-                        }
-                    }
                 }
             },
             {
@@ -584,7 +564,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v58-fragB",
+        "remarks": "Serverless-v59-fragB",
         "version": {
             "min": "26.11.1"
         },
@@ -698,6 +678,18 @@
                 "tag": "tcp-direct",
                 "protocol": "direct",
                 "streamSettings": {
+                    "finalmask": {
+                        "tcp": [
+                            {
+                                "type": "merge",
+                                "settings": {
+                                    "times": 100,
+                                    "delayMs": 30,
+                                    "maxBytes": 16384
+                                }
+                            }
+                        ]
+                    },
                     "sockopt": {
                         "domainStrategy": "ForceIP",
                         "happyEyeballs": {
@@ -723,38 +715,6 @@
                 "protocol": "dns",
                 "settings": {
                     "userLevel": 12
-                }
-            },
-            {
-                "tag": "tcp-fragment",
-                "protocol": "direct",
-                "streamSettings": {
-                    "finalmask": {
-                        "tcp": [
-                            {
-                                "type": "fragment",
-                                "settings": {
-                                    "packets": "1-1",
-                                    "lengths": [
-                                        "1"
-                                    ],
-                                    "delays": [
-                                        "1"
-                                    ],
-                                    "maxSplit": "201"
-                                }
-                            }
-                        ]
-                    },
-                    "sockopt": {
-                        "domainStrategy": "ForceIP",
-                        "happyEyeballs": {
-                            "tryDelayMs": 300,
-                            "prioritizeIPv6": true,
-                            "interleave": 4,
-                            "maxConcurrentTry": 20
-                        }
-                    }
                 }
             },
             {
@@ -1162,7 +1122,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v58-oob",
+        "remarks": "Serverless-v59-oob",
         "version": {
             "min": "26.11.1"
         },
@@ -1276,6 +1236,18 @@
                 "tag": "tcp-direct",
                 "protocol": "direct",
                 "streamSettings": {
+                    "finalmask": {
+                        "tcp": [
+                            {
+                                "type": "merge",
+                                "settings": {
+                                    "times": 100,
+                                    "delayMs": 30,
+                                    "maxBytes": 16384
+                                }
+                            }
+                        ]
+                    },
                     "sockopt": {
                         "domainStrategy": "ForceIP",
                         "happyEyeballs": {
@@ -1301,86 +1273,6 @@
                 "protocol": "dns",
                 "settings": {
                     "userLevel": 12
-                }
-            },
-            {
-                "tag": "tcp-fragment",
-                "protocol": "direct",
-                "streamSettings": {
-                    "finalmask": {
-                        "tcp": [
-                            {
-                                "type": "fragment",
-                                "settings": {
-                                    "packets": "1-1",
-                                    "lengths": [
-                                        "1"
-                                    ],
-                                    "delays": [
-                                        "1"
-                                    ],
-                                    "maxSplit": "201"
-                                }
-                            }
-                        ]
-                    },
-                    "sockopt": {
-                        "domainStrategy": "ForceIP",
-                        "happyEyeballs": {
-                            "tryDelayMs": 300,
-                            "prioritizeIPv6": true,
-                            "interleave": 4,
-                            "maxConcurrentTry": 20
-                        }
-                    }
-                }
-            },
-            {
-                "tag": "tcp-fragment-tls",
-                "protocol": "direct",
-                "streamSettings": {
-                    "finalmask": {
-                        "tcp": [
-                            {
-                                "type": "fragment",
-                                "settings": {
-                                    "packets": "tlshello",
-                                    "lengths": [
-                                        "6",
-                                        "98",
-                                        "1"
-                                    ],
-                                    "delays": [
-                                        "0"
-                                    ],
-                                    "maxSplit": "0"
-                                }
-                            },
-                            {
-                                "type": "fragment",
-                                "settings": {
-                                    "packets": "1-1",
-                                    "lengths": [
-                                        "114",
-                                        "1"
-                                    ],
-                                    "delays": [
-                                        "1"
-                                    ],
-                                    "maxSplit": "11"
-                                }
-                            }
-                        ]
-                    },
-                    "sockopt": {
-                        "domainStrategy": "ForceIP",
-                        "happyEyeballs": {
-                            "tryDelayMs": 300,
-                            "prioritizeIPv6": true,
-                            "interleave": 4,
-                            "maxConcurrentTry": 20
-                        }
-                    }
                 }
             },
             {

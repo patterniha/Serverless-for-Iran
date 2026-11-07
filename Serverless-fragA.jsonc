@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v58-fragA",
+  "remarks": "Serverless-v59-fragA",
 
   "version": {
     "min": "26.11.1"
@@ -92,6 +92,11 @@
       "tag": "tcp-direct",
       "protocol": "direct",
       "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}}
+          ]
+        },
         "sockopt": {
           "domainStrategy": "ForceIP",
           "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
@@ -112,21 +117,6 @@
       "protocol": "dns",
       "settings": {
         "userLevel": 12
-      }
-    },
-    {
-      "tag": "tcp-fragment",
-      "protocol": "direct",
-      "streamSettings": {
-        "finalmask": {
-          "tcp": [
-            {"type": "fragment", "settings": {"packets": "1-1", "lengths": ["1"], "delays": ["1"], "maxSplit": "201"}}
-          ]
-        },
-        "sockopt": {
-          "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 20}
-        }
       }
     },
     {
