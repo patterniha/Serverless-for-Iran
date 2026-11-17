@@ -7,10 +7,10 @@
   },
 
 
-  "remarks": "Serverless-v60-fragB",
+  "remarks": "Serverless-v61-fragB",
 
   "version": {
-    "min": "26.11.20"
+    "min": "26.11.21"
   },
 
   "log": {
@@ -119,6 +119,23 @@
       }
     },
     {
+      "tag": "tcp-fragment-tls-try",
+      "protocol": "direct",
+      "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}}
+          ]
+        },
+        "sockopt": {
+          "fallback": {"noResponseFallbackDialerProxy": "tcp-fragment-tls", "maxBufferSize": 16384, "waitMs": 2000, "passPrimaryConnAddress": true},
+          "tcpUserTimeout": 4000,
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+        }
+      }
+    },
+    {
       "tag": "tcp-fragment-tls",
       "protocol": "direct",
       "streamSettings": {
@@ -130,6 +147,26 @@
           ]
         },
         "sockopt": {
+          "tcpUserTimeout": 4000,
+          "domainStrategy": "ForceIP",
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+        }
+      }
+    },
+    {
+      "tag": "tcp-fragment-tls-cloudflare-try",
+      "protocol": "direct",
+      "settings": {
+        "redirect": "cloudflare.redirect:0"
+      },
+      "streamSettings": {
+        "finalmask": {
+          "tcp": [
+            {"type": "merge", "settings": {"times": 100, "delayMs": 30, "maxBytes": 16384}}
+          ]
+        },
+        "sockopt": {
+          "fallback": {"noResponseFallbackDialerProxy": "tcp-fragment-tls-cloudflare", "maxBufferSize": 16384, "waitMs": 2000, "passPrimaryConnAddress": true},
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
           "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
@@ -308,26 +345,26 @@
       },
       {
         "outboundTag": "tcp-fragment-tls-cloudflare",
-        "network": "tcp", "protocol": ["tls"], "domain": ["domain:twimg.com"], "ip": ["0.0.0.0/0", "::/0"]
+        "network": "tcp", "protocol": ["tls"], "domain": ["domain:twimg.com", "full:cloudflare-ech.com"], "ip": ["0.0.0.0/0", "::/0"]
       },
       {
         "outboundTag": "tcp-fragment-tls-cloudflare",
-        "network": "tcp", "port": "443,2053,2083,2087,2096,8443", "domain": ["domain:twimg.com"], "ip": ["0.0.0.0/0", "::/0"]
+        "network": "tcp", "port": "443,2053,2083,2087,2096,8443", "domain": ["domain:twimg.com", "full:cloudflare-ech.com"], "ip": ["0.0.0.0/0", "::/0"]
       },
       {
-        "outboundTag": "tcp-fragment-tls-cloudflare",
+        "outboundTag": "tcp-fragment-tls-cloudflare-try",
         "network": "tcp", "protocol": ["tls"], "ip": ["geoip:cloudflare"]
       },
       {
-        "outboundTag": "tcp-fragment-tls-cloudflare",
+        "outboundTag": "tcp-fragment-tls-cloudflare-try",
         "network": "tcp", "port": "443,2053,2083,2087,2096,8443", "ip": ["geoip:cloudflare"]
       },
       {
-        "outboundTag": "tcp-fragment-tls",
+        "outboundTag": "tcp-fragment-tls-try",
         "network": "tcp", "protocol": ["tls"], "ip": ["0.0.0.0/0", "::/0"]
       },
       {
-        "outboundTag": "tcp-fragment-tls",
+        "outboundTag": "tcp-fragment-tls-try",
         "network": "tcp", "port": "443", "ip": ["0.0.0.0/0", "::/0"]
       },
       {
