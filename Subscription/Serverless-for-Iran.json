@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v61-fragA",
+        "remarks": "Serverless-v62-fragA",
         "version": {
             "min": "26.11.21"
         },
@@ -224,7 +224,7 @@
                                     "packets": "tlshello",
                                     "lengths": [
                                         "6",
-                                        "99",
+                                        "32",
                                         "1"
                                     ],
                                     "delays": [
@@ -238,7 +238,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "115",
+                                        "48",
                                         "1"
                                     ],
                                     "delays": [
@@ -321,7 +321,7 @@
                                     "packets": "tlshello",
                                     "lengths": [
                                         "6",
-                                        "99",
+                                        "32",
                                         "1"
                                     ],
                                     "delays": [
@@ -335,7 +335,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "115",
+                                        "48",
                                         "1"
                                     ],
                                     "delays": [
@@ -381,7 +381,7 @@
                                     "packets": "tlshello",
                                     "lengths": [
                                         "6",
-                                        "99",
+                                        "32",
                                         "1"
                                     ],
                                     "delays": [
@@ -395,7 +395,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "115",
+                                        "48",
                                         "1"
                                     ],
                                     "delays": [
@@ -846,7 +846,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v61-fragB",
+        "remarks": "Serverless-v62-fragB",
         "version": {
             "min": "26.11.21"
         },
@@ -1064,7 +1064,7 @@
                                     "packets": "tlshello",
                                     "lengths": [
                                         "0",
-                                        "105",
+                                        "38",
                                         "1"
                                     ],
                                     "delays": [
@@ -1078,7 +1078,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "115",
+                                        "48",
                                         "1"
                                     ],
                                     "delays": [
@@ -1161,7 +1161,7 @@
                                     "packets": "tlshello",
                                     "lengths": [
                                         "0",
-                                        "105",
+                                        "38",
                                         "1"
                                     ],
                                     "delays": [
@@ -1175,7 +1175,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "115",
+                                        "48",
                                         "1"
                                     ],
                                     "delays": [
@@ -1221,7 +1221,7 @@
                                     "packets": "tlshello",
                                     "lengths": [
                                         "0",
-                                        "105",
+                                        "38",
                                         "1"
                                     ],
                                     "delays": [
@@ -1235,7 +1235,7 @@
                                 "settings": {
                                     "packets": "1-1",
                                     "lengths": [
-                                        "115",
+                                        "48",
                                         "1"
                                     ],
                                     "delays": [
@@ -1686,7 +1686,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v61-oob",
+        "remarks": "Serverless-v62-oob",
         "version": {
             "min": "26.11.21"
         },
