@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v62-fragA",
+        "remarks": "Serverless-v63-fragA",
         "version": {
             "min": "26.11.21"
         },
@@ -60,7 +60,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -84,7 +83,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -654,7 +652,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -672,7 +669,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -846,7 +842,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v62-fragB",
+        "remarks": "Serverless-v63-fragB",
         "version": {
             "min": "26.11.21"
         },
@@ -900,7 +896,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -924,7 +919,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -1494,7 +1488,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -1512,7 +1505,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -1686,7 +1678,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v62-oob",
+        "remarks": "Serverless-v63-oob",
         "version": {
             "min": "26.11.21"
         },
@@ -1740,7 +1732,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -1764,7 +1755,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -2273,7 +2263,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",
@@ -2291,7 +2280,6 @@
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
                         "geosite:hcaptcha",
-                        "geosite:cloudflare",
                         "geosite:category-speedtest",
                         "geosite:category-ip-geo-detect",
                         "geosite:stackexchange",

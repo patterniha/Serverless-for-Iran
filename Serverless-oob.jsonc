@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v62-oob",
+  "remarks": "Serverless-v63-oob",
 
   "version": {
     "min": "26.11.21"
@@ -41,7 +41,7 @@
     "servers": [
       {
         "address": "fakedns",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:cloudflare", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
       },
       {
         "tag": "no-filter-dns",
@@ -52,7 +52,7 @@
       {
         "tag": "domestic-dns",
         "address": "localhost",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:cloudflare", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"],
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"],
         "timeoutMs": 12000,
         "finalQuery": true
       }
@@ -304,11 +304,11 @@
       },
       {
         "outboundTag": "tcp-direct",
-        "network": "tcp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:cloudflare", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
+        "network": "tcp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
       },
 	  {
         "outboundTag": "udp-direct",
-        "network": "udp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:cloudflare", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
+        "network": "udp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
       },
       {
         "outboundTag": "block",
