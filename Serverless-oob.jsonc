@@ -7,7 +7,7 @@
   },
 
 
-  "remarks": "Serverless-v63-oob",
+  "remarks": "Serverless-v64-oob",
 
   "version": {
     "min": "26.11.21"
@@ -166,7 +166,7 @@
           ]
         },
         "sockopt": {
-          "fallback": {"noResponseFallbackDialerProxy": "tcp-oob-cloudflare", "maxBufferSize": 16384, "waitMs": 2000, "passPrimaryConnAddress": true},
+          "fallback": {"noResponseFallbackDialerProxy": "tcp-oob", "maxBufferSize": 16384, "waitMs": 2000, "passPrimaryConnAddress": true},
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
           "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}

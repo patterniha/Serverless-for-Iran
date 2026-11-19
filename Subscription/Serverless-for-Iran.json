@@ -6,7 +6,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v63-fragA",
+        "remarks": "Serverless-v64-fragA",
         "version": {
             "min": "26.11.21"
         },
@@ -280,7 +280,7 @@
                     },
                     "sockopt": {
                         "fallback": {
-                            "noResponseFallbackDialerProxy": "tcp-fragment-tls-cloudflare",
+                            "noResponseFallbackDialerProxy": "tcp-fragment-tls",
                             "maxBufferSize": 16384,
                             "waitMs": 2000,
                             "passPrimaryConnAddress": true
@@ -842,7 +842,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v63-fragB",
+        "remarks": "Serverless-v64-fragB",
         "version": {
             "min": "26.11.21"
         },
@@ -1116,7 +1116,7 @@
                     },
                     "sockopt": {
                         "fallback": {
-                            "noResponseFallbackDialerProxy": "tcp-fragment-tls-cloudflare",
+                            "noResponseFallbackDialerProxy": "tcp-fragment-tls",
                             "maxBufferSize": 16384,
                             "waitMs": 2000,
                             "passPrimaryConnAddress": true
@@ -1678,7 +1678,7 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v63-oob",
+        "remarks": "Serverless-v64-oob",
         "version": {
             "min": "26.11.21"
         },
@@ -1937,7 +1937,7 @@
                     },
                     "sockopt": {
                         "fallback": {
-                            "noResponseFallbackDialerProxy": "tcp-oob-cloudflare",
+                            "noResponseFallbackDialerProxy": "tcp-oob",
                             "maxBufferSize": 16384,
                             "waitMs": 2000,
                             "passPrimaryConnAddress": true
