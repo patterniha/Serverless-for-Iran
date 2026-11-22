@@ -6,9 +6,9 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v64-fragA",
+        "remarks": "Serverless-v65-fragA",
         "version": {
-            "min": "26.11.21"
+            "min": "26.11.23"
         },
         "log": {
             "loglevel": "warning",
@@ -30,23 +30,22 @@
         },
         "dns": {
             "hosts": {
-                "geosite:category-ads-all": "#3",
                 "dns.redirect": [
                     "2606:4700:4408::ac40:9bd1",
                     "2a06:98c1:3122::",
                     "2a06:98c1:3101::6812:202f",
                     "2a06:98c1:3123::",
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ],
                 "cloudflare.redirect": [
                     "2606:4700:4408::ac40:9bd1",
                     "2a06:98c1:3122::",
                     "2a06:98c1:3101::6812:202f",
                     "2a06:98c1:3123::",
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ],
                 "x.redirect": [
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ]
             },
             "servers": [
@@ -59,11 +58,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -82,11 +79,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ],
                     "timeoutMs": 12000,
                     "finalQuery": true
@@ -147,6 +142,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -197,6 +193,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -254,6 +251,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -291,6 +289,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -351,6 +350,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -411,6 +411,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -484,6 +485,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32,
                             "successDefinition": "tlshandshakecomplete"
                         }
@@ -612,12 +614,6 @@
             "domainStrategy": "IPOnDemand",
             "rules": [
                 {
-                    "outboundTag": "block",
-                    "domain": [
-                        "geosite:category-ads-all"
-                    ]
-                },
-                {
                     "outboundTag": "tcp-direct",
                     "inboundTag": [
                         "domestic-dns"
@@ -642,6 +638,17 @@
                     "port": 53
                 },
                 {
+                    "outboundTag": "block",
+                    "domain": [
+                        "geosite:category-ads-all",
+                        "geosite:category-doh"
+                    ]
+                },
+                {
+                    "outboundTag": "block",
+                    "port": 853
+                },
+                {
                     "outboundTag": "tcp-direct",
                     "network": "tcp",
                     "domain": [
@@ -651,11 +658,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -668,11 +673,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -842,9 +845,9 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v64-fragB",
+        "remarks": "Serverless-v65-fragB",
         "version": {
-            "min": "26.11.21"
+            "min": "26.11.23"
         },
         "log": {
             "loglevel": "warning",
@@ -866,23 +869,22 @@
         },
         "dns": {
             "hosts": {
-                "geosite:category-ads-all": "#3",
                 "dns.redirect": [
                     "2606:4700:4408::ac40:9bd1",
                     "2a06:98c1:3122::",
                     "2a06:98c1:3101::6812:202f",
                     "2a06:98c1:3123::",
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ],
                 "cloudflare.redirect": [
                     "2606:4700:4408::ac40:9bd1",
                     "2a06:98c1:3122::",
                     "2a06:98c1:3101::6812:202f",
                     "2a06:98c1:3123::",
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ],
                 "x.redirect": [
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ]
             },
             "servers": [
@@ -895,11 +897,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -918,11 +918,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ],
                     "timeoutMs": 12000,
                     "finalQuery": true
@@ -983,6 +981,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1033,6 +1032,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1090,6 +1090,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1127,6 +1128,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1187,6 +1189,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1247,6 +1250,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1320,6 +1324,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32,
                             "successDefinition": "tlshandshakecomplete"
                         }
@@ -1448,12 +1453,6 @@
             "domainStrategy": "IPOnDemand",
             "rules": [
                 {
-                    "outboundTag": "block",
-                    "domain": [
-                        "geosite:category-ads-all"
-                    ]
-                },
-                {
                     "outboundTag": "tcp-direct",
                     "inboundTag": [
                         "domestic-dns"
@@ -1478,6 +1477,17 @@
                     "port": 53
                 },
                 {
+                    "outboundTag": "block",
+                    "domain": [
+                        "geosite:category-ads-all",
+                        "geosite:category-doh"
+                    ]
+                },
+                {
+                    "outboundTag": "block",
+                    "port": 853
+                },
+                {
                     "outboundTag": "tcp-direct",
                     "network": "tcp",
                     "domain": [
@@ -1487,11 +1497,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -1504,11 +1512,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -1678,9 +1684,9 @@
             "donate2": "USDT (TRC20): TU5gKvKqcXPn8itp1DouBCwcqGHMemBm8o",
             "donate3": "TON (TON): UQAc-mZB3y7uxWHKiMmq0ORZEYgycWDWZ4V1k73HsXvTJx-i"
         },
-        "remarks": "Serverless-v64-oob",
+        "remarks": "Serverless-v65-oob",
         "version": {
-            "min": "26.11.21"
+            "min": "26.11.23"
         },
         "log": {
             "loglevel": "warning",
@@ -1702,23 +1708,22 @@
         },
         "dns": {
             "hosts": {
-                "geosite:category-ads-all": "#3",
                 "dns.redirect": [
                     "2606:4700:4408::ac40:9bd1",
                     "2a06:98c1:3122::",
                     "2a06:98c1:3101::6812:202f",
                     "2a06:98c1:3123::",
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ],
                 "cloudflare.redirect": [
                     "2606:4700:4408::ac40:9bd1",
                     "2a06:98c1:3122::",
                     "2a06:98c1:3101::6812:202f",
                     "2a06:98c1:3123::",
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ],
                 "x.redirect": [
-                    "104.18.0.8"
+                    "188.114.99.0"
                 ]
             },
             "servers": [
@@ -1731,11 +1736,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -1754,11 +1757,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ],
                     "timeoutMs": 12000,
                     "finalQuery": true
@@ -1819,6 +1820,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1869,6 +1871,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1911,6 +1914,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1948,6 +1952,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -1993,6 +1998,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -2038,6 +2044,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32
                         }
                     }
@@ -2095,6 +2102,7 @@
                             "tryDelayMs": 300,
                             "prioritizeIPv6": true,
                             "interleave": 4,
+                            "assuranceFirstInterleave": true,
                             "maxConcurrentTry": 32,
                             "successDefinition": "tlshandshakecomplete"
                         }
@@ -2223,12 +2231,6 @@
             "domainStrategy": "IPOnDemand",
             "rules": [
                 {
-                    "outboundTag": "block",
-                    "domain": [
-                        "geosite:category-ads-all"
-                    ]
-                },
-                {
                     "outboundTag": "tcp-direct",
                     "inboundTag": [
                         "domestic-dns"
@@ -2253,6 +2255,17 @@
                     "port": 53
                 },
                 {
+                    "outboundTag": "block",
+                    "domain": [
+                        "geosite:category-ads-all",
+                        "geosite:category-doh"
+                    ]
+                },
+                {
+                    "outboundTag": "block",
+                    "port": 853
+                },
+                {
                     "outboundTag": "tcp-direct",
                     "network": "tcp",
                     "domain": [
@@ -2262,11 +2275,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {
@@ -2279,11 +2290,9 @@
                         "geosite:category-ai-cn",
                         "geosite:category-ai-!cn",
                         "geosite:category-ai-ru",
-                        "geosite:hcaptcha",
+                        "domain:cloudflare.com",
                         "geosite:category-speedtest",
-                        "geosite:category-ip-geo-detect",
-                        "geosite:stackexchange",
-                        "geosite:category-consent-management"
+                        "geosite:category-ip-geo-detect"
                     ]
                 },
                 {

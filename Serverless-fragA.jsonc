@@ -7,10 +7,10 @@
   },
 
 
-  "remarks": "Serverless-v64-fragA",
+  "remarks": "Serverless-v65-fragA",
 
   "version": {
-    "min": "26.11.21"
+    "min": "26.11.23"
   },
 
   "log": {
@@ -33,15 +33,14 @@
 
   "dns":{
     "hosts": {
-      "geosite:category-ads-all": "#3",
-      "dns.redirect": ["2606:4700:4408::ac40:9bd1", "2a06:98c1:3122::", "2a06:98c1:3101::6812:202f", "2a06:98c1:3123::", "104.18.0.8"],
-      "cloudflare.redirect": ["2606:4700:4408::ac40:9bd1", "2a06:98c1:3122::", "2a06:98c1:3101::6812:202f", "2a06:98c1:3123::", "104.18.0.8"],
-      "x.redirect": ["104.18.0.8"]
+      "dns.redirect": ["2606:4700:4408::ac40:9bd1", "2a06:98c1:3122::", "2a06:98c1:3101::6812:202f", "2a06:98c1:3123::", "188.114.99.0"],
+      "cloudflare.redirect": ["2606:4700:4408::ac40:9bd1", "2a06:98c1:3122::", "2a06:98c1:3101::6812:202f", "2a06:98c1:3123::", "188.114.99.0"],
+      "x.redirect": ["188.114.99.0"]
     },
     "servers": [
       {
         "address": "fakedns",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "domain:cloudflare.com", "geosite:category-speedtest", "geosite:category-ip-geo-detect"]
       },
       {
         "tag": "no-filter-dns",
@@ -52,7 +51,7 @@
       {
         "tag": "domestic-dns",
         "address": "localhost",
-        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"],
+        "domains": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "domain:cloudflare.com", "geosite:category-speedtest", "geosite:category-ip-geo-detect"],
         "timeoutMs": 12000,
         "finalQuery": true
       }
@@ -98,7 +97,7 @@
         "sockopt": {
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32}
         }
       }
     },
@@ -131,7 +130,7 @@
           "fallback": {"noResponseFallbackDialerProxy": "tcp-fragment-tls", "maxBufferSize": 16384, "waitMs": 2000, "passPrimaryConnAddress": true},
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32}
         }
       }
     },
@@ -149,7 +148,7 @@
         "sockopt": {
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32}
         }
       }
     },
@@ -169,7 +168,7 @@
           "fallback": {"noResponseFallbackDialerProxy": "tcp-fragment-tls", "maxBufferSize": 16384, "waitMs": 2000, "passPrimaryConnAddress": true},
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32}
         }
       }
     },
@@ -190,7 +189,7 @@
         "sockopt": {
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32}
         }
       }
     },
@@ -211,7 +210,7 @@
         "sockopt": {
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32}
         }
       }
     },
@@ -243,7 +242,7 @@
           "tcpHandshakeTimeout": 12000,
           "tcpUserTimeout": 4000,
           "domainStrategy": "ForceIP",
-          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "maxConcurrentTry": 32, "successDefinition": "tlshandshakecomplete"}
+          "happyEyeballs": {"tryDelayMs": 300, "prioritizeIPv6": true, "interleave": 4, "assuranceFirstInterleave": true, "maxConcurrentTry": 32, "successDefinition": "tlshandshakecomplete"}
         }
       }
     },
@@ -282,10 +281,6 @@
     "domainStrategy": "IPOnDemand",
     "rules": [
       {
-        "outboundTag": "block",
-        "domain": ["geosite:category-ads-all"]
-      },
-      {
         "outboundTag": "tcp-direct",
         "inboundTag": ["domestic-dns"],
         "network": "tcp"
@@ -304,12 +299,20 @@
         "port": 53
       },
       {
+        "outboundTag": "block",
+        "domain": ["geosite:category-ads-all", "geosite:category-doh"]
+      },
+      {
+        "outboundTag": "block",
+        "port": 853
+      },
+      {
         "outboundTag": "tcp-direct",
-        "network": "tcp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
+        "network": "tcp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "domain:cloudflare.com", "geosite:category-speedtest", "geosite:category-ip-geo-detect"]
       },
 	  {
         "outboundTag": "udp-direct",
-        "network": "udp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "geosite:hcaptcha", "geosite:category-speedtest", "geosite:category-ip-geo-detect", "geosite:stackexchange", "geosite:category-consent-management"]
+        "network": "udp", "domain": ["domain:ir", "geosite:private", "geosite:category-ir", "geosite:category-ai-cn", "geosite:category-ai-!cn", "geosite:category-ai-ru", "domain:cloudflare.com", "geosite:category-speedtest", "geosite:category-ip-geo-detect"]
       },
       {
         "outboundTag": "block",
